@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anass AKDIM - Portfolio BTS SIO SISR</title>
+    <meta name="description"
+        content="Portfolio d'Anass AKDIM, futur technicien réseau et système en BTS SIO option SISR. Découvrez mes compétences, projets et ma veille technologique.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="glow-bg glow-bg-1"></div>
+    <div class="glow-bg glow-bg-2"></div>
+    <div class="cyber-grid"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">
+                    << /span>
+                        <span class="logo-text">AKDIM</span>
+                        <span class="logo-bracket">/></span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Accueil</a></li>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="#projects" class="nav-link">Réalisations</a></li>
+                    <li><a href="#veille" class="nav-link">Veille</a></li>
+                    <li><a href="#contact" class="nav-link btn-contact-nav">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-greeting"><span class="terminal-prompt">></span> root@server:~# whoami</p>
+                    <h1 class="hero-title">Anass <span class="highlight">AKDIM</span></h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text">Technicien Réseaux & Systèmes</span><span class="cursor">_</span>
+                    </h2>
+                    <p class="hero-description">
+                        Étudiant en BTS SIO option SISR (Solutions d'Infrastructure, Systèmes et Réseaux).
+                        Passionné par la cybersécurité, l'administration système et l'ingénierie réseau.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Explorer mes projets <i
+                                class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-outline">Me contacter</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-btn close"></span>
+                                <span class="terminal-btn minimize"></span>
+                                <span class="terminal-btn maximize"></span>
+                            </div>
+                            <div class="terminal-title">bash - akdim@portfolio:~</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line"><span class="cmd-prompt">akdim@portfolio:~$</span> ./init_sys.sh
+                            </div>
+                            <div class="terminal-line output">[OK] Booting System...</div>
+                            <div class="terminal-line output">[OK] Loading Network Protocols...</div>
+                            <div class="terminal-line output">[OK] Establishing Secure Connection...</div>
+                            <div class="terminal-line output">[OK] Mounting File Systems...</div>
+                            <div class="terminal-line"><span class="cmd-prompt">akdim@portfolio:~$</span> systemctl
+                                status bts_sio_sisr.service</div>
+                            <div class="terminal-line output highlight-text">● bts_sio_sisr.service - BTS SIO Option
+                                SISR Service</div>
+                            <div class="terminal-line output"> Loaded: loaded (/etc/systemd/system/bts_sio_sisr.service;
+                                enabled)</div>
+                            <div class="terminal-line output"> Active: active (running) since Wed 2026-03-06 14:41:51
+                                CET</div>
+                            <div class="terminal-line"><span class="cmd-prompt">akdim@portfolio:~$</span> <span
+                                    class="blinking-cursor">_</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="highlight">01.</span> À propos de moi</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text glass-panel">
+                        <p>Bonjour ! Je m'appelle <strong>Anass AKDIM</strong> et je suis actuellement en formation pour
+                            obtenir mon <strong>BTS SIO (Services Informatiques aux Organisations) option SISR
+                                (Solutions d'Infrastructure, Systèmes et Réseaux)</strong>.</p>
+                        <p>Mon objectif est de concevoir, déployer et administrer des infrastructures réseaux sécurisées
+                            et performantes. Je suis particulièrement intéressé par les architectures Cloud,
+                            l'administration Linux, et les enjeux de cybersécurité.</p>
+                        <p>Curieux et rigoureux, j'aime relever des défis techniques complexes et je maintiens une
+                            veille technologique constante pour rester à jour sur les dernières innovations.</p>
+
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Formation</h4>
+                                    <span>BTS SIO option SISR</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Localisation</h4>
+                                    <span>[Votre Ville]</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-paper-plane"></i>
+                                <div>
+                                    <h4>Mobilité</h4>
+                                    <span>Disponible pour alternance/stage</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-actions mt-4">
+                            <a href="#" class="btn btn-outline" target="_blank"><i class="fas fa-download"></i>
+                                Télécharger mon CV</a>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <!-- Education Timeline -->
+                        <div class="timeline glass-panel">
+                            <h3 class="timeline-title"><i class="fas fa-history"></i> Parcours</h3>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">202X - Présent</div>
+                                <div class="timeline-content">
+                                    <h4>BTS SIO Option SISR</h4>
+                                    <p>[Nom de l'établissement]</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">202X - 202X</div>
+                                <div class="timeline-content">
+                                    <h4>Baccalauréat [Option/Série]</h4>
+                                    <p>[Nom de l'établissement]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="highlight">02.</span> Compétences SISR</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <p class="section-description text-center max-w-2xl mx-auto mb-5">
+                    Acquises durant ma formation BTS SIO et de manière autodidacte, ces compétences me permettent de
+                    gérer l'ensemble du cycle de vie d'une infrastructure IT.
+                </p>
+
+                <div class="skills-grid">
+                    <!-- Reseau -->
+                    <div class="skill-category glass-panel hover-glow">
+                        <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="skill-title">Infrastructure Réseau</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i> Configuration de switchs/routeurs (Cisco)</li>
+                            <li><i class="fas fa-check"></i> Adressage IPv4/IPv6, VLSM</li>
+                            <li><i class="fas fa-check"></i> Routage (statique, OSPF, RIP)</li>
+                            <li><i class="fas fa-check"></i> VLANs, STP, Trunking</li>
+                            <li><i class="fas fa-check"></i> Services: DHCP, DNS, NAT</li>
+                        </ul>
+                    </div>
+
+                    <!-- Systemes Linux -->
+                    <div class="skill-category glass-panel hover-glow">
+                        <div class="skill-icon"><i class="fab fa-linux"></i></div>
+                        <h3 class="skill-title">Systèmes Linux</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i> Administration Debian/Ubuntu/CentOS</li>
+                            <li><i class="fas fa-check"></i> Serveurs Web (Apache, Nginx)</li>
+                            <li><i class="fas fa-check"></i> Bases de données (MySQL, MariaDB)</li>
+                            <li><i class="fas fa-check"></i> Scripts Bash, automatisation</li>
+                            <li><i class="fas fa-check"></i> Docker, conteneurisation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Systemes Windows -->
+                    <div class="skill-category glass-panel hover-glow">
+                        <div class="skill-icon"><i class="fab fa-windows"></i></div>
+                        <h3 class="skill-title">Systèmes Windows</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i> Windows Server 2019/2022</li>
+                            <li><i class="fas fa-check"></i> Active Directory, GPO</li>
+                            <li><i class="fas fa-check"></i> Services: DNS, DHCP, IIS</li>
+                            <li><i class="fas fa-check"></i> Scripts PowerShell</li>
+                            <li><i class="fas fa-check"></i> Déploiement WDS, WSUS</li>
+                        </ul>
+                    </div>
+
+                    <!-- Securite -->
+                    <div class="skill-category glass-panel hover-glow">
+                        <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="skill-title">Cybersécurité</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i> Configuration Pare-feu (pfSense)</li>
+                            <li><i class="fas fa-check"></i> Mise en place de VPN (OpenVPN, IPsec)</li>
+                            <li><i class="fas fa-check"></i> Analyse de trames (Wireshark)</li>
+                            <li><i class="fas fa-check"></i> Sauvegarde (Veeam)</li>
+                            <li><i class="fas fa-check"></i> Supervision (GLPI, Zabbix/Nagios)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="highlight">03.</span> Réalisations</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="reseau">Réseaux</button>
+                    <button class="filter-btn" data-filter="systeme">Systèmes</button>
+                    <button class="filter-btn" data-filter="securite">Sécurité</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card filter-item" data-category="systeme">
+                        <div class="project-image">
+                            <!-- Placeholder pour image de projet -->
+                            <div class="img-placeholder"><i class="fas fa-server"></i></div>
+                        </div>
+                        <div class="project-content glass-panel">
+                            <h3 class="project-title">Déploiement Active Directory</h3>
+                            <p class="project-desc">Mise en place d'une architecture d'annuaire sous Windows Server 2022
+                                avec gestion des GPO, profils itinérants et intégration de postes clients.</p>
+                            <div class="project-tags">
+                                <span class="tag">Windows Server</span>
+                                <span class="tag">AD DS</span>
+                                <span class="tag">GPO</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-file-pdf"></i> Compte-rendu</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card filter-item" data-category="reseau">
+                        <div class="project-image">
+                            <div class="img-placeholder"><i class="fas fa-network-wired"></i></div>
+                        </div>
+                        <div class="project-content glass-panel">
+                            <h3 class="project-title">Architecture VLAN et Routage OSPF</h3>
+                            <p class="project-desc">Conception et configuration d'une topologie réseau multi-sites sous
+                                Cisco Packet Tracer et matériel physique. Configuration DHCP relay et sécurité des
+                                ports.</p>
+                            <div class="project-tags">
+                                <span class="tag">Cisco</span>
+                                <span class="tag">VLAN</span>
+                                <span class="tag">OSPF</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-file-pdf"></i> Compte-rendu</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card filter-item" data-category="securite">
+                        <div class="project-image">
+                            <div class="img-placeholder"><i class="fas fa-shield-virus"></i></div>
+                        </div>
+                        <div class="project-content glass-panel">
+                            <h3 class="project-title">Mise en place d'un pare-feu pfSense</h3>
+                            <p class="project-desc">Déploiement et configuration experte d'un firewall pfSense. Création
+                                de règles de filtrage, configuration du portail captif et d'un VPN accès distant.</p>
+                            <div class="project-tags">
+                                <span class="tag">pfSense</span>
+                                <span class="tag">VPN</span>
+                                <span class="tag">Filtrage</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-file-pdf"></i> Compte-rendu</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card filter-item" data-category="systeme">
+                        <div class="project-image">
+                            <div class="img-placeholder"><i class="fab fa-linux"></i></div>
+                        </div>
+                        <div class="project-content glass-panel">
+                            <h3 class="project-title">Supervision avec GLPI & Zabbix</h3>
+                            <p class="project-desc">Installation d'un serveur LAMP sous Linux Debian. Déploiement de
+                                GLPI pour le Helpdesk et Zabbix pour le monitoring actif de l'infrastructure.</p>
+                            <div class="project-tags">
+                                <span class="tag">Debian</span>
+                                <span class="tag">Zabbix</span>
+                                <span class="tag">GLPI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-file-pdf"></i> Compte-rendu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Veille Technologique Section -->
+        <section id="veille" class="veille section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="highlight">04.</span> Veille Technologique</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="veille-container glass-panel">
+                    <div class="veille-intro">
+                        <h3>L'importance de la veille en SISR</h3>
+                        <p>Dans un domaine en constante évolution comme l'informatique, la veille technologique est
+                            cruciale. Elle me permet d'anticiper les vulnérabilités, de découvrir de nouveaux standards
+                            et d'optimiser les infrastructures.</p>
+
+                        <div class="veille-tools">
+                            <h4>Mes outils :</h4>
+                            <div class="tools-list">
+                                <span class="tool-tag"><i class="fas fa-rss"></i> Feedly</span>
+                                <span class="tool-tag"><i class="fab fa-twitter"></i> Twitter/X InfoSec</span>
+                                <span class="tool-tag"><i class="fab fa-youtube"></i> Chaînes Spécialisées</span>
+                                <span class="tool-tag"><i class="fas fa-envelope-open-text"></i> Newsletters IT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="veille-topic">
+                        <!-- Exemple de sujet de veille -->
+                        <div class="topic-header">
+                            <i class="fas fa-fingerprint topic-icon text-glow"></i>
+                            <h3>Sujet : L'évolution des ransomwares et les stratégies de défense (Zero Trust)</h3>
+                        </div>
+                        <div class="topic-content">
+                            <p><strong>Problématique :</strong> Face à la professionnalisation des attaques par
+                                ransomware (Ransomware-as-a-Service), comment les architectures d'entreprise
+                                doivent-elles s'adapter pour garantir la résilience de leur système d'information ?</p>
+
+                            <h4>Axes de recherche :</h4>
+                            <ul class="topic-list">
+                                <li>L'architecture "Zero Trust Network Access" (ZTNA).</li>
+                                <li>L'immuabilité des sauvegardes (Air-gap, WORM).</li>
+                                <li>Le rôle de l'EDR/XDR dans la détection proactive.</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-outline btn-sm mt-3"><i class="fas fa-file-pdf"></i> Lire la
+                                synthèse de veille</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="highlight">05.</span> Me Contacter</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info glass-panel">
+                        <h3>Restons en contact</h3>
+                        <p>Je suis actuellement à la recherche d'une opportunité (stage/alternance) dans le domaine de
+                            l'administration réseaux et systèmes. N'hésitez pas à me contacter !</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="method-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:email@exemple.com">email@exemple.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon"><i class="fab fa-linkedin-in"></i></div>
+                                <div class="method-details">
+                                    <h4>LinkedIn</h4>
+                                    <a href="#" target="_blank">linkedin.com/in/anassakdim</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon"><i class="fab fa-github"></i></div>
+                                <div class="method-details">
+                                    <h4>GitHub</h4>
+                                    <a href="#" target="_blank">github.com/anassakdim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form glass-panel">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Votre adresse email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" required
+                                placeholder="Sujet de votre message">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Votre message..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-full">Envoyer le message <i
+                                class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Anass AKDIM. Conçu pour le BTS SIO SISR.</p>
+            <div class="footer-links">
+                <a href="https://github.com/anassakdim" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/anassakdim" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
