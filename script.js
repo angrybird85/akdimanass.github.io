@@ -128,4 +128,34 @@ document.addEventListener('DOMContentLoaded', () => {
             delay += Math.floor(Math.random() * 400) + 200; 
         });
     }
+    // 6. Image Modal Logic
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("modalCaption");
+    const closeBtn = document.querySelector(".close-modal");
+    const projectImages = document.querySelectorAll(".project-image img");
+
+    if (modal && projectImages) {
+        projectImages.forEach(img => {
+            img.addEventListener("click", function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt || "Aperçu du projet";
+            });
+        });
+
+        // Close on X click
+        if (closeBtn) {
+            closeBtn.addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+        }
+
+        // Close on background click
+        window.addEventListener("click", function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
 });

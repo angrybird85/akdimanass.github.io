@@ -889,6 +889,71 @@ ul {
     color: var(--accent-blue);
 }
 
+/* Image Modal */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 9, 19, 0.95);
+    backdrop-filter: blur(5px);
+}
+
+.image-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    margin-top: 5vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+    animation: zoom 0.3s ease;
+}
+
+#modalCaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: var(--text-primary);
+    padding: 15px 0;
+    height: 10vh;
+    font-family: var(--font-heading);
+}
+
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: var(--text-muted);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--accent-blue);
+}
+
+@keyframes zoom {
+    from {transform:scale(0.8); opacity: 0;}
+    to {transform:scale(1); opacity: 1;}
+}
+
+.project-image img {
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero-container, .about-grid, .veille-container, .contact-wrapper {

@@ -267,6 +267,26 @@
                 </div>
 
                 <div class="projects-grid">
+                    <!-- Project: Centralisation des accès -->
+                    <div class="project-card filter-item" data-category="systeme">
+                        <div class="project-image">
+                            <!-- Image du projet: Enregistrez votre capture sous le nom "capture_ad.png" dans le meme dossier que l'index.html -->
+                            <img src="capture_ad.png" alt="Architecture de réplication AD et DFS-R" style="width: 100%; height: 100%; object-fit: cover; display: block; background: #fff;">
+                        </div>
+                        <div class="project-content glass-panel">
+                            <h3 class="project-title">Centralisation des accès utilisateurs et gestion des fichiers avec une réplication du Contrôleur de Domaine</h3>
+                            <p class="project-desc">Mise en place d'une infrastructure avec domaine Active Directory, service DNS et partages de fichiers répliqués entre serveurs via la technologie DFS-R pour assurer une haute disponibilité.</p>
+                            <div class="project-tags">
+                                <span class="tag">Active Directory</span>
+                                <span class="tag">DFS-R</span>
+                                <span class="tag">Haute Disponibilité</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-file-pdf"></i> Compte-rendu</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Project 1 -->
                     <div class="project-card filter-item" data-category="systeme">
                         <div class="project-image">
@@ -485,6 +505,15 @@
             </div>
         </div>
     </footer>
+
+    </footer>
+
+    <!-- Modal pour les images de projets -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="image-modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
