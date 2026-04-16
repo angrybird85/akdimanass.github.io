@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schéma d'Architecture - Centralisation des Accès</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    
+    <style>
+        body {
+            background-color: var(--bg-color, #0f172a);
+            color: var(--text-color, #ccd6f6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header-schema {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color, #64ffda);
+            text-decoration: none;
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        .schema-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 40px;
+            background: rgba(10, 25, 47, 0.7);
+            border-radius: 15px;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+            overflow-x: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #e2e8f0;
+            font-size: 2rem;
+        }
+        
+        .highlight {
+            color: var(--primary-color, #64ffda);
+        }
+
+        .schema-legend {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(2, 12, 27, 0.5);
+            border-left: 4px solid var(--primary-color, #64ffda);
+            border-radius: 0 8px 8px 0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .schema-legend h3 {
+            color: var(--primary-color, #64ffda);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .schema-legend ul {
+            list-style-type: none;
+        }
+
+        .schema-legend li {
+            margin-bottom: 10px;
+        }
+        
+        .schema-legend i {
+            color: var(--primary-color, #64ffda);
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-bg glow-bg-1"></div>
+    <div class="cyber-grid"></div>
+
+    <header class="header-schema">
+        <a href="index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i> Retour au portfolio
+        </a>
+    </header>
+
+    <main class="schema-container glass-panel">
+        <h1>Architecture <span class="highlight">Active Directory & DFS-R</span></h1>
+        
+        <div class="mermaid">
+            flowchart TD
+                classDef internet fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0f172a;
+                classDef firewall fill:#ef4444,stroke:#991b1b,stroke-width:2px,color:#fff;
+                classDef server fill:#1e40af,stroke:#60a5fa,stroke-width:2px,color:#fff;
+                classDef client fill:#059669,stroke:#34d399,stroke-width:2px,color:#fff;
+
+                WAN(("☁️ IP PUBLIQUE<br>WAN (NAT)")):::internet
+                
+                FW["🧱 <b>Firewall/Routeur M2L</b>"]:::firewall
+                
+                WAN --- FW
+                
+                subgraph "LAN M2L (Réseau: 10.75.20.1/24)"
+                    direction TB
+                    
+                    subgraph " "
+                        CLIENT["💻 <b>Client</b>"]:::client
+                    end
+                    
+                    subgraph "Zone Serveurs"
+                        SCD1["🖥️ <b>SCD1</b><br>10.75.20.10/24<br>AD / GPO / DNS"]:::server
+                        SCD2["🖥️ <b>SCD2</b><br>10.75.20.11/24"]:::server
+                        FICHIER["📁 <b>Serveur de fichier</b><br>10.75.20.110/24"]:::server
+                        
+                        SCD1 <==>|"REPLICATION AD<br>(DFS-R)"| SCD2
+                        SCD1 --- FICHIER
+                    end
+                end
+                
+                FW --- CLIENT
+                FW --- SCD1
+        </div>
+
+        <div class="schema-legend">
+            <h3>📝 Légendes techniques</h3>
+            <ul>
+                <li><i class="fas fa-cloud"></i> <b>Zone WAN :</b> Réseau externe avec IP Publique.</li>
+                <li><i class="fas fa-shield-alt"></i> <b>Firewall / Routeur (M2L) :</b> Assure le routage et la sécurité entre WAN et LAN.</li>
+                <li><i class="fas fa-network-wired"></i> <b>Réseau Local (LAN) :</b> Réseau adressé sur la plage associée à la passerelle 10.75.20.1/24.</li>
+                <li><i class="fas fa-server"></i> <b>SCD1 & SCD2 :</b> Contrôleurs de domaine (10.75.20.10/24 et 10.75.20.11/24) avec réplication AD/DFS-R.</li>
+                <li><i class="fas fa-folder-open"></i> <b>Serveur de Fichier :</b> Hébergement centralisé (10.75.20.110/24) rattaché au domaine.</li>
+                <li><i class="fas fa-desktop"></i> <b>Client :</b> Poste utilisateur du LAN.</li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            securityLevel: 'loose',
+            flowchart: {
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>
